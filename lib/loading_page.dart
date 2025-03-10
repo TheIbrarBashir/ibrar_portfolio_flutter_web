@@ -34,7 +34,7 @@ class _LoadingPageState extends State<LoadingPage> {
   Widget build(BuildContext context) {
     if (_isLoading) {
       return Scaffold(
-        backgroundColor: ebony,
+        backgroundColor: AppColors.ebony,
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

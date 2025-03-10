@@ -16,7 +16,7 @@ class DrawerImage extends StatelessWidget {
         shape: BoxShape.circle,
         gradient: LinearGradient(
           colors: [
-            studio,
+            AppColors. studio,
             Color(0xFF6a5ae4),
           ],
         ),

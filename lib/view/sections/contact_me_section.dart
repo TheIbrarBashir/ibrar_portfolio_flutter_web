@@ -31,7 +31,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
   Widget build(BuildContext context) {
     return Container(
         decoration: const BoxDecoration(
-          color: ebony,
+          color: AppColors.ebony,
         ),
         width: width(),
         padding: EdgeInsets.symmetric(
@@ -39,7 +39,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+          children: <Widget>[
             verticalSpace(0.05),
             GradientTextWidget(
               size: widget.size,
@@ -57,7 +57,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
                 SvgPicture.asset(
                   "assets/icons/chat.svg",
                   colorFilter: const ColorFilter.mode(
-                    white,
+                    AppColors.white,
                     BlendMode.srcIn,
                   ),
                 ),
@@ -78,7 +78,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
                   child: SvgPicture.asset(
                     "assets/icons/copy.svg",
                     colorFilter: const ColorFilter.mode(
-                      white,
+                      AppColors.white,
                       BlendMode.srcIn,
                     ),
                   ),
@@ -92,7 +92,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
                 SvgPicture.asset(
                   "assets/icons/call.svg",
                   colorFilter: const ColorFilter.mode(
-                    white,
+                    AppColors.white,
                     BlendMode.srcIn,
                   ),
                 ),
@@ -113,7 +113,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
                   child: SvgPicture.asset(
                     "assets/icons/copy.svg",
                     colorFilter: const ColorFilter.mode(
-                      white,
+                      AppColors.white,
                       BlendMode.srcIn,
                     ),
                   ),
@@ -128,332 +128,6 @@ class _ContactMeSectionState extends State<ContactMeSection> {
             ),
             verticalSpace(0.02),
           ],
-        )
-
-        // width() > 950
-        //     ? Row(
-        //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //         children: [
-        //           Container(
-        //             padding: const EdgeInsets.all(
-        //               30,
-        //             ),
-        //             width: width() * 0.37,
-        //             decoration: BoxDecoration(
-        //               color: valhalla,
-        //               borderRadius: BorderRadius.circular(
-        //                 15,
-        //               ),
-        //             ),
-        //             child: Form(
-        //               key: formKey,
-        //               child: Column(
-        //                 crossAxisAlignment: CrossAxisAlignment.start,
-        //                 children: [
-        //                   GradientTextWidget(
-        //                     size: widget.size,
-        //                     text1: "Let's work together!",
-        //                     fsize:
-        //                         width() < 950 ? width() * 0.04 : width() * 0.023,
-        //                   ),
-        //                   Text(
-        //                     "I code beautifully simple things and I love what I do. Just simple like that!",
-        //                     style: TextStyles.style16regular,
-        //                   ),
-        //                   Row(
-        //                     children: [
-        //                       Expanded(
-        //                         child: TextInputForm(
-        //                           hint: "First Name",
-        //                           bgColor: ebony.withOpacity(
-        //                             0.8,
-        //                           ),
-        //                           validator: (value) {
-        //                             if (value.isNotEmpty) {
-        //                               return "Cannot be empty";
-        //                             }
-        //                             return null;
-        //                           },
-        //                         ),
-        //                       ),
-        //                       horizontalSpaceMedium(),
-        //                       Expanded(
-        //                         child: TextInputForm(
-        //                           hint: "Last Name",
-        //                           bgColor: ebony.withOpacity(
-        //                             0.8,
-        //                           ),
-        //                         ),
-        //                       ),
-        //                     ],
-        //                   ),
-        //                   Row(
-        //                     children: [
-        //                       Expanded(
-        //                         child: TextInputForm(
-        //                           hint: "Email Address",
-        //                           bgColor: ebony.withOpacity(
-        //                             0.8,
-        //                           ),
-        //                           validator: (value) {
-        //                             if (value.isNotEmpty) {
-        //                               return "Cannot be empty";
-        //                             }
-        //                             return null;
-        //                           },
-        //                         ),
-        //                       ),
-        //                       horizontalSpaceMedium(),
-        //                       Expanded(
-        //                         child: TextInputForm(
-        //                           hint: "Phone Number",
-        //                           bgColor: ebony.withOpacity(
-        //                             0.8,
-        //                           ),
-        //                         ),
-        //                       ),
-        //                     ],
-        //                   ),
-        //                   TextInputForm(
-        //                     hint: "Message",
-        //                     maxLines: 7,
-        //                     bgColor: ebony.withOpacity(
-        //                       0.8,
-        //                     ),
-        //                     validator: (value) {
-        //                       if (value.isNotEmpty) {
-        //                         return "Cannot be empty";
-        //                       }
-        //                       return null;
-        //                     },
-        //                   ),
-        //                   AppButton(
-        //                     onTap: () {
-        //                       if (formKey.currentState!.validate()) {
-        //                         sendEmail(
-        //                           recipientEmail: emailTC.text,
-        //                           subject:
-        //                               "From ${firstNameTC.text},${lastNameTC.text},${phoneTC.text}",
-        //                           body: messageTC.text,
-        //                         );
-        //                       }
-        //                     },
-        //                     title: "Send Message",
-        //                   )
-        //                 ],
-        //               ),
-        //             ),
-        //           ),
-        //           Column(
-        //             crossAxisAlignment: CrossAxisAlignment.start,
-        //             mainAxisAlignment: MainAxisAlignment.center,
-        //             children: [
-        //               Row(
-        //                 children: [
-        //                   const Icon(
-        //                     Icons.phone,
-        //                     color: white,
-        //                     size: 50,
-        //                   ),
-        //                   Column(
-        //                     crossAxisAlignment: CrossAxisAlignment.start,
-        //                     children: [
-        //                       Text(
-        //                         "Phone",
-        //                         style: TextStyles.style16regular,
-        //                       ),
-        //                       Text(
-        //                         "+(234) 702 5214 514",
-        //                         style: TextStyles.style24extrabold,
-        //                       ),
-        //                     ],
-        //                   ),
-        //                 ],
-        //               ),
-        //               verticalSpaceMedium(),
-        //               Row(
-        //                 children: [
-        //                   const Icon(
-        //                     Icons.email,
-        //                     color: white,
-        //                     size: 50,
-        //                   ),
-        //                   Column(
-        //                     crossAxisAlignment: CrossAxisAlignment.start,
-        //                     children: [
-        //                       Text(
-        //                         "Email",
-        //                         style: TextStyles.style16regular,
-        //                       ),
-        //                       Text(
-        //                         "odapo138@gmail.com",
-        //                         style: TextStyles.style24extrabold,
-        //                       ),
-        //                     ],
-        //                   ),
-        //                 ],
-        //               ),
-        //             ],
-        //           )
-        //         ],
-        //       )
-        //     : Column(
-        //         crossAxisAlignment: CrossAxisAlignment.start,
-        //         children: [
-        //           Row(
-        //             children: [
-        //               const Icon(
-        //                 Icons.phone,
-        //                 color: white,
-        //                 size: 50,
-        //               ),
-        //               Column(
-        //                 crossAxisAlignment: CrossAxisAlignment.start,
-        //                 children: [
-        //                   Text(
-        //                     "Phone",
-        //                     style: TextStyles.style16regular,
-        //                   ),
-        //                   Text(
-        //                     "+(234) 702 5214 514",
-        //                     style: TextStyles.style24extrabold,
-        //                   ),
-        //                 ],
-        //               ),
-        //             ],
-        //           ),
-        //           verticalSpaceMedium(),
-        //           Row(
-        //             children: [
-        //               const Icon(
-        //                 Icons.email,
-        //                 color: white,
-        //                 size: 50,
-        //               ),
-        //               Column(
-        //                 crossAxisAlignment: CrossAxisAlignment.start,
-        //                 children: [
-        //                   Text(
-        //                     "Email",
-        //                     style: TextStyles.style16regular,
-        //                   ),
-        //                   Text(
-        //                     "odapo138@gmail.com",
-        //                     style: TextStyles.style24extrabold,
-        //                   ),
-        //                 ],
-        //               ),
-        //             ],
-        //           ),
-        //           verticalSpace(0.1),
-        //           Container(
-        //             padding: const EdgeInsets.all(
-        //               30,
-        //             ),
-        //             decoration: BoxDecoration(
-        //               color: valhalla.withOpacity(0.6),
-        //               borderRadius: BorderRadius.circular(
-        //                 15,
-        //               ),
-        //             ),
-        //             child: Column(
-        //               crossAxisAlignment: CrossAxisAlignment.start,
-        //               children: [
-        //                 GradientTextWidget(
-        //                   size: widget.size,
-        //                   text1: "Let's work together!",
-        //                   fsize: 35,
-        //                 ),
-        //                 Text(
-        //                   "I code beautifully simple things and I love what I do. Just simple like that!",
-        //                   style: TextStyles.style16regular,
-        //                 ),
-        //                 Row(
-        //                   children: [
-        //                     Expanded(
-        //                       child: TextInputForm(
-        //                         hint: "First Name",
-        //                         bgColor: ebony.withOpacity(
-        //                           0.8,
-        //                         ),
-        //                       ),
-        //                     ),
-        //                     horizontalSpaceMedium(),
-        //                     Expanded(
-        //                       child: TextInputForm(
-        //                         hint: "Last Name",
-        //                         bgColor: ebony.withOpacity(
-        //                           0.8,
-        //                         ),
-        //                       ),
-        //                     ),
-        //                   ],
-        //                 ),
-        //                 Row(
-        //                   children: [
-        //                     Expanded(
-        //                       child: TextInputForm(
-        //                         hint: "Email Address",
-        //                         bgColor: ebony.withOpacity(
-        //                           0.8,
-        //                         ),
-        //                       ),
-        //                     ),
-        //                     horizontalSpaceMedium(),
-        //                     Expanded(
-        //                       child: TextInputForm(
-        //                         hint: "Phone Number",
-        //                         bgColor: ebony.withOpacity(
-        //                           0.8,
-        //                         ),
-        //                       ),
-        //                     ),
-        //                   ],
-        //                 ),
-        //                 TextInputForm(
-        //                   hint: "Message",
-        //                   maxLines: 7,
-        //                   bgColor: ebony.withOpacity(
-        //                     0.8,
-        //                   ),
-        //                 ),
-        //                 AppButton(
-        //                   onTap: () {
-        //                     sendEmail(
-        //                       recipientEmail: emailTC.text,
-        //                       subject:
-        //                           "From ${firstNameTC.text},${lastNameTC.text},${phoneTC.text}",
-        //                       body: messageTC.text,
-        //                     );
-        //                   },
-        //                   title: "Send Message",
-        //                 )
-        //               ],
-        //             ),
-        //           ),
-        //         ],
-        //       ),
-        );
+        ));
   }
-
-  // Future<void> sendEmail({
-  //   required String recipientEmail,
-  //   required String subject,
-  //   required String body,
-  // }) async {
-  //   final Uri emailUri = Uri(
-  //     scheme: 'mailto',
-  //     path: recipientEmail,
-  //     queryParameters: {
-  //       'subject': subject,
-  //       'body': body,
-  //     },
-  //   );
-
-  //   if (await canLaunchUrl(emailUri)) {
-  //     await launchUrl(emailUri);
-  //   } else {
-  //     throw Exception('Could not launch email client');
-  //   }
-  // }
 }

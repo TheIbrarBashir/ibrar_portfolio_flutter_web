@@ -57,8 +57,8 @@ class _ScrollPositionIndicatorFABState
             child: CircularProgressIndicator(
               value: progress, // Progress value
               strokeWidth: 4,
-              color: studio, // Progress indicator color
-              backgroundColor: studio.withOpacity(0.2), // Track color
+              color: AppColors.studio, // Progress indicator color
+              backgroundColor: AppColors.studio.withOpacity(0.2), // Track color
             ),
           ),
           const CircleAvatar(
@@ -66,7 +66,7 @@ class _ScrollPositionIndicatorFABState
             backgroundColor: Colors.black, // FAB background color
             child: Icon(
               Icons.arrow_upward,
-              color: studio,
+              color: AppColors.studio,
             ),
           ),
         ],

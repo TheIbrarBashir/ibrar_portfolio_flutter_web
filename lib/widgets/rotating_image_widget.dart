@@ -34,7 +34,7 @@ class _RotatingImageContainerState extends State<RotatingImageContainer> {
               'assets/images/profile_new.jpg',
             ),
           ),
-          border: Border.all(color: isHovered ? studio : valhalla, width: 1.2),
+          border: Border.all(color: isHovered ? AppColors.studio :AppColors. valhalla, width: 1.2),
           borderRadius: BorderRadius.circular(20),
         ),
       ),

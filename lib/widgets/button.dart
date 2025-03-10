@@ -39,8 +39,8 @@ class AppButton extends StatelessWidget {
           ),
           gradient: LinearGradient(
             colors: [
-              studio,
-              studio.withOpacity(0.5),
+              AppColors.studio,
+              AppColors. studio.withOpacity(0.5),
             ],
           ),
         ),
@@ -53,7 +53,7 @@ class AppButton extends StatelessWidget {
             child: Text(
               title,
               style: TextStyles.style14extrabold.copyWith(
-                color: textColor ?? (allowSubmit ? white : black),
+                color: textColor ?? (allowSubmit ? AppColors.white : AppColors.black),
               ),
             ),
           ),

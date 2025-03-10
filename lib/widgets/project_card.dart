@@ -8,6 +8,7 @@ import 'package:visibility_detector/visibility_detector.dart';
 
 class ProjectCard extends StatefulWidget {
   final Project project;
+
   const ProjectCard({
     super.key,
     required this.project,
@@ -37,7 +38,7 @@ class _ProjectCardState extends State<ProjectCard> {
               height: width() * 0.07,
               width: width() * 0.07,
               decoration: BoxDecoration(
-                color: valhalla.withOpacity(0.8),
+                color: AppColors.valhalla.withOpacity(0.8),
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Stack(
@@ -60,9 +61,10 @@ class _ProjectCardState extends State<ProjectCard> {
                       curve: Curves.linear,
                       duration: const Duration(milliseconds: 400),
                       height: _isHovered ? height() * 0.1 : 0,
-                      width: width(), //_isHovered ? width() : 0,
+                      width: width(),
+                      //_isHovered ? width() : 0,
                       decoration: BoxDecoration(
-                        color: studio,
+                        color: AppColors.studio,
                         borderRadius: BorderRadius.circular(15),
                       ),
                       child: Padding(
@@ -100,7 +102,7 @@ class _ProjectCardState extends State<ProjectCard> {
                                       style:
                                           TextStyles.style12extrabold.copyWith(
                                         decoration: TextDecoration.underline,
-                                        decorationColor: white,
+                                        decorationColor: AppColors.white,
                                       ),
                                     ),
                                   ),
@@ -118,48 +120,13 @@ class _ProjectCardState extends State<ProjectCard> {
                                       style:
                                           TextStyles.style12extrabold.copyWith(
                                         decoration: TextDecoration.underline,
-                                        decorationColor: white,
+                                        decorationColor: AppColors.white,
                                       ),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                            // Expanded(
-                            //   child: Row(
-                            //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            //     children: [
-                            //       TextButton(
-                            //         onPressed: () async {
-                            //           var url = widget.project.iosUrl;
-                            //           if (await canLaunchUrl(Uri.parse(url))) {
-                            //             await launchUrl(Uri.parse(url));
-                            //           } else {
-                            //             throw 'Could not launch $url';
-                            //           }
-                            //         },
-                            //         child: Text(
-                            //           "iOS",
-                            //           style: TextStyles.style18regular,
-                            //         ),
-                            //       ),
-                            //       TextButton(
-                            //         onPressed: () async {
-                            //           var url = widget.project.androidUrl;
-                            //           if (await canLaunchUrl(Uri.parse(url))) {
-                            //             await launchUrl(Uri.parse(url));
-                            //           } else {
-                            //             throw 'Could not launch $url';
-                            //           }
-                            //         },
-                            //         child: Text(
-                            //           "Android",
-                            //           style: TextStyles.style18regular,
-                            //         ),
-                            //       ),
-                            //     ],
-                            //   ),
-                            // ),
                           ],
                         ),
                       ),
@@ -185,7 +152,7 @@ class _ProjectCardState extends State<ProjectCard> {
                   height: width() * 0.07,
                   width: width() * 0.07,
                   decoration: BoxDecoration(
-                    color: valhalla.withOpacity(0.8),
+                    color: AppColors.valhalla.withOpacity(0.8),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Stack(
@@ -210,7 +177,7 @@ class _ProjectCardState extends State<ProjectCard> {
                           height: _isVisible ? height() * 0.1 : 0,
                           width: width(),
                           decoration: BoxDecoration(
-                            color: studio,
+                            color: AppColors.studio,
                             borderRadius: BorderRadius.circular(15),
                           ),
                           child: Padding(
@@ -257,7 +224,7 @@ class _ProjectCardState extends State<ProjectCard> {
                                             fontSize: width() < 600 ? 10 : 16,
                                             decoration:
                                                 TextDecoration.underline,
-                                            decorationColor: white,
+                                            decorationColor: AppColors.white,
                                           ),
                                         ),
                                       ),
@@ -278,7 +245,7 @@ class _ProjectCardState extends State<ProjectCard> {
                                             fontSize: width() < 600 ? 10 : 16,
                                             decoration:
                                                 TextDecoration.underline,
-                                            decorationColor: white,
+                                            decorationColor: AppColors.white,
                                           ),
                                         ),
                                       ),

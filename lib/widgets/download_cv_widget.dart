@@ -27,7 +27,7 @@ class DownloadCVButton extends StatelessWidget {
         decoration: BoxDecoration(
             color: Colors.transparent,
             borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: paleSlate)),
+            border: Border.all(color: AppColors.paleSlate)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -40,7 +40,7 @@ class DownloadCVButton extends StatelessWidget {
             ),
             const FaIcon(
               FontAwesomeIcons.download,
-              color: paleSlate,
+              color: AppColors.paleSlate,
               size: 18,
             )
           ],

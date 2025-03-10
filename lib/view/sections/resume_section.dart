@@ -18,7 +18,7 @@ class ResumeSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        color: ebony,
+        color: AppColors.ebony,
       ),
       width: width(),
       padding: EdgeInsets.symmetric(
@@ -43,7 +43,7 @@ class ResumeSection extends StatelessWidget {
                               height: width() > 950
                                   ? width() * 0.03
                                   : width() * 0.05,
-                              color: studio,
+                              color: AppColors.studio,
                             ),
                           ),
                           GradientTextWidget(
@@ -83,7 +83,7 @@ class ResumeSection extends StatelessWidget {
                               height: width() > 950
                                   ? width() * 0.03
                                   : width() * 0.05,
-                              color: studio,
+                              color: AppColors.studio,
                             ),
                           ),
                           GradientTextWidget(size: size, text1: "My Education"),
@@ -124,7 +124,7 @@ class ResumeSection extends StatelessWidget {
                             child: Image.asset(
                               "assets/icons/experience.png",
                               height: width() * 0.1,
-                              color: studio,
+                              color: AppColors.studio,
                             ),
                           ),
                           GradientTextWidget(
@@ -163,7 +163,7 @@ class ResumeSection extends StatelessWidget {
                             child: Image.asset(
                               "assets/icons/education.png",
                               height: width() * 0.1,
-                              color: studio,
+                              color: AppColors.studio,
                             ),
                           ),
                           GradientTextWidget(size: size, text1: "My Education"),

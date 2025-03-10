@@ -5,18 +5,18 @@ import 'colors.dart';
 class Styles {
   static const BoxDecoration gradientDecoration = BoxDecoration(
     gradient: LinearGradient(
-      colors: [
-        ebony,
-        valhalla,
+      colors:<Color> [
+       AppColors.ebony,
+        AppColors.valhalla,
       ],
     ),
   );
 
   static const BoxDecoration drawerDecoration = BoxDecoration(
     gradient: LinearGradient(
-      colors: [
-        studio,
-        ebony,
+      colors: <Color>[
+        AppColors.studio,
+        AppColors.ebony,
       ],
     ),
   );

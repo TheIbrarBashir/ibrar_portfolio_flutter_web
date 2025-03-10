@@ -91,16 +91,16 @@ class _TextInputFormState extends State<TextInputForm> {
                   filled: widget.bgColor != null ? true : false,
                   fillColor: widget.bgColor ?? Colors.transparent,
                   border: const OutlineInputBorder(
-                    borderSide: BorderSide(color: capeCod, width: 1),
+                    borderSide: BorderSide(color: AppColors.capeCod, width: 1),
                     borderRadius: BorderRadius.all(
                       Radius.circular(4),
                     ),
                   ),
                   enabledBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: capeCod, width: 1),
+                      borderSide: BorderSide(color: AppColors.capeCod, width: 1),
                       borderRadius: BorderRadius.all(Radius.circular(4))),
                   focusedBorder: const OutlineInputBorder(
-                      borderSide: BorderSide(color: studio, width: 1),
+                      borderSide: BorderSide(color: AppColors.studio, width: 1),
                       borderRadius: BorderRadius.all(Radius.circular(4))),
                   errorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0),
@@ -108,7 +108,7 @@ class _TextInputFormState extends State<TextInputForm> {
                           const BorderSide(color: Colors.redAccent, width: 1)),
                   focusedErrorBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(4.0),
-                      borderSide: const BorderSide(color: studio, width: 1)),
+                      borderSide: const BorderSide(color:AppColors. studio, width: 1)),
                   suffixIcon: widget.suffixIcon ??
                       (widget.obscure == true
                           ? InkWell(
@@ -122,8 +122,8 @@ class _TextInputFormState extends State<TextInputForm> {
                                     ? Icons.visibility_outlined
                                     : Icons.visibility_off_outlined,
                                 color: widget.controller!.text.isEmpty
-                                    ? capeCod
-                                    : studio,
+                                    ?AppColors. capeCod
+                                    : AppColors.studio,
                               ),
                             )
                           : const SizedBox()),
@@ -131,7 +131,7 @@ class _TextInputFormState extends State<TextInputForm> {
                   hintText: widget.hint,
                   prefixText: widget.prefixText,
                   hintStyle: TextStyles.style14bold.copyWith(
-                    color: capeCod,
+                    color: AppColors.capeCod,
                   ),
                   contentPadding: const EdgeInsets.symmetric(
                     horizontal: 16,
@@ -210,7 +210,7 @@ class TextInputField extends StatelessWidget {
                 controller: controller,
                 keyboardType: keyboardType,
                 style: TextStyles.style14regular.copyWith(
-                  color: black,
+                  color:AppColors. black,
                 ),
                 textCapitalization: textCapitalization,
                 validator: validator,
@@ -223,16 +223,16 @@ class TextInputField extends StatelessWidget {
                 decoration: InputDecoration(
                   filled: false,
                   border: const UnderlineInputBorder(
-                    borderSide: BorderSide(color: studio, width: 1),
+                    borderSide: BorderSide(color: AppColors.studio, width: 1),
                     borderRadius: BorderRadius.all(
                       Radius.circular(4),
                     ),
                   ),
                   enabledBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(color: studio, width: 1),
+                      borderSide: BorderSide(color: AppColors.studio, width: 1),
                       borderRadius: BorderRadius.all(Radius.circular(4))),
                   focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(color: studio, width: 1),
+                      borderSide: BorderSide(color: AppColors.studio, width: 1),
                       borderRadius: BorderRadius.all(Radius.circular(4))),
                   errorBorder: UnderlineInputBorder(
                       borderRadius: BorderRadius.circular(5.0),
@@ -240,13 +240,13 @@ class TextInputField extends StatelessWidget {
                           const BorderSide(color: Colors.redAccent, width: 1)),
                   focusedErrorBorder: UnderlineInputBorder(
                       borderRadius: BorderRadius.circular(4.0),
-                      borderSide: const BorderSide(color: studio, width: 1)),
+                      borderSide: const BorderSide(color: AppColors.studio, width: 1)),
                   suffixIcon: suffixIcon,
                   prefixIcon: prefixIcon,
                   hintText: hint,
                   prefixText: prefixText,
                   hintStyle: TextStyles.style14regular.copyWith(
-                    color: capeCod,
+                    color: AppColors.capeCod,
                   ),
                   contentPadding: const EdgeInsets.symmetric(
                     horizontal: 16,

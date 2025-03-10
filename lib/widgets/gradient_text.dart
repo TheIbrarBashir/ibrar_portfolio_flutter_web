@@ -32,8 +32,8 @@ class GradientTextWidget extends StatelessWidget {
       textAlign: width() < 600 && alignment != null ? alignment : null,
       "$text1\n${text2 ?? ""}",
       colors: const [
-        studio,
-        paleSlate,
+        AppColors. studio,
+        AppColors. paleSlate,
       ],
       style: TextStyles.style24extrabold.copyWith(
         fontSize: fsize ??

@@ -40,7 +40,7 @@ class _ResumeCardState extends State<ResumeCard> {
           child: Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: revolver,
+              color:AppColors. revolver,
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
@@ -49,7 +49,7 @@ class _ResumeCardState extends State<ResumeCard> {
                 Text(
                   widget.date,
                   style: TextStyles.style18extrabold.copyWith(
-                    color: studio,
+                    color:AppColors. studio,
                     fontSize: width() > 950
                         ? 18
                         : width() < 600

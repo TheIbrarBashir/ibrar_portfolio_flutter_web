@@ -18,7 +18,7 @@ class LanguageCode {
 }
 
 class TranslationService extends Translations {
-  static Locale? get locale => Get.deviceLocale;
+  static Locale? get locale => Get.fallbackLocale;
   static const enLocale = Locale('en', 'US');
   static const arLocale = Locale('ur', 'PK');
   static Locale fallbackLocale = enLocale;

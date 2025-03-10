@@ -39,7 +39,7 @@ flutter:
     - assets/images/
     - assets/fonts/
     - assets/icons/
-    - assets/json/
+    - assets/animation/
 
   fonts:
     - family: SpaceGrotesk

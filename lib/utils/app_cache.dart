@@ -19,5 +19,5 @@ class AppCache {
       instance.setString(AppCacheKeys.appLocaleKey, appLocale);
 
   static String getAppLocale() =>
-      instance.getString(AppCacheKeys.appLocaleKey) ?? '';
+      instance.getString(AppCacheKeys.appLocaleKey) ?? 'en';
 }

@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/widgets/all_projects.dart';
 import 'package:flutter_portfolio/widgets/gradient_text.dart';
+import 'package:get/get.dart';
+
+import '../../localization/text_keys.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -8,10 +11,10 @@ class ProjectsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: <Widget>[
         GradientTextWidget(
           size: MediaQuery.of(context).size,
-          text1: "My Recent Projects",
+          text1: TextKeys.myRecentProject.tr,
         ),
         AllProjects(
           size: MediaQuery.of(context).size,

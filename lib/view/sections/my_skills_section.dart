@@ -3,6 +3,9 @@ import 'package:flutter_portfolio/constants/const.dart';
 import 'package:flutter_portfolio/data/my_skills.dart';
 import 'package:flutter_portfolio/widgets/gradient_text.dart';
 import 'package:flutter_portfolio/widgets/skills_widget.dart';
+import 'package:get/get.dart';
+
+import '../../localization/text_keys.dart';
 
 class MySkillsSection extends StatelessWidget {
   final Size size;
@@ -22,7 +25,7 @@ class MySkillsSection extends StatelessWidget {
       ),
       child: Column(
         children: [
-          GradientTextWidget(size: size, text1: "My Skills"),
+          GradientTextWidget(size: size, text1: TextKeys.mySkills.tr),
           width() > 600
               ? Wrap(
                   spacing: 20.0,

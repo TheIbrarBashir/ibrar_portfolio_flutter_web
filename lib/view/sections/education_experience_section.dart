@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/constants/colors.dart';
 import 'package:flutter_portfolio/constants/const.dart';
-import 'package:flutter_portfolio/data/education.dart';
-import 'package:flutter_portfolio/data/resume_list.dart';
+import 'package:flutter_portfolio/data/education_experience.dart';
 import 'package:flutter_portfolio/widgets/gradient_text.dart';
 import 'package:flutter_portfolio/widgets/resume_card.dart';
+import 'package:get/get.dart';
+
+import '../../localization/text_keys.dart';
 
 class ResumeSection extends StatelessWidget {
   final Size size;
@@ -47,21 +49,23 @@ class ResumeSection extends StatelessWidget {
                             ),
                           ),
                           GradientTextWidget(
-                              size: size, text1: "My Experience"),
+                              size: size, text1: TextKeys.myExperience.tr),
                         ],
                       ),
                       ListView.separated(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemCount: resumeData.length,
+                        itemCount: experienceList.length,
                         separatorBuilder: (context, index) =>
                             verticalSpaceMedium(),
                         itemBuilder: (context, index) {
-                          final resumeItem = resumeData[index];
+                          final experienceItem =
+                              experienceList.elementAt(index);
                           return ResumeCard(
-                            title: resumeItem["title"]!,
-                            date: resumeItem["date"]!,
-                            company: resumeItem["company"]!,
+                            title: experienceItem.title,
+                            indexKey: "KEY_${experienceItem.company}$index",
+                            date: experienceItem.date,
+                            company: experienceItem.company,
                           );
                         },
                       ),
@@ -86,7 +90,8 @@ class ResumeSection extends StatelessWidget {
                               color: AppColors.studio,
                             ),
                           ),
-                          GradientTextWidget(size: size, text1: "My Education"),
+                          GradientTextWidget(
+                              size: size, text1: TextKeys.myEducation.tr),
                         ],
                       ),
                       ListView.separated(
@@ -98,9 +103,10 @@ class ResumeSection extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final educationItem = educationList[index];
                           return ResumeCard(
-                            title: educationItem["title"]!,
-                            date: educationItem["date"]!,
-                            company: educationItem["company"]!,
+                            title: educationItem.title,
+                            indexKey: "KEY_${educationItem.company}_$index",
+                            date: educationItem.date,
+                            company: educationItem.company,
                           );
                         },
                       ),
@@ -128,21 +134,23 @@ class ResumeSection extends StatelessWidget {
                             ),
                           ),
                           GradientTextWidget(
-                              size: size, text1: "My Experience"),
+                              size: size, text1: TextKeys.myExperience.tr),
                         ],
                       ),
                       ListView.separated(
                         shrinkWrap: true,
                         physics: const NeverScrollableScrollPhysics(),
-                        itemCount: resumeData.length,
+                        itemCount: experienceList.length,
                         separatorBuilder: (context, index) =>
                             verticalSpaceMedium(),
                         itemBuilder: (context, index) {
-                          final resumeItem = resumeData[index];
+                          final experienceItem =
+                          experienceList.elementAt(index);
                           return ResumeCard(
-                            title: resumeItem["title"]!,
-                            date: resumeItem["date"]!,
-                            company: resumeItem["company"]!,
+                            title: experienceItem.title,
+                            indexKey: "KEY_${experienceItem.company}$index",
+                            date: experienceItem.date,
+                            company: experienceItem.company,
                           );
                         },
                       ),
@@ -166,7 +174,8 @@ class ResumeSection extends StatelessWidget {
                               color: AppColors.studio,
                             ),
                           ),
-                          GradientTextWidget(size: size, text1: "My Education"),
+                          GradientTextWidget(
+                              size: size, text1: TextKeys.myEducation.tr),
                         ],
                       ),
                       ListView.separated(
@@ -178,9 +187,10 @@ class ResumeSection extends StatelessWidget {
                         itemBuilder: (context, index) {
                           final educationItem = educationList[index];
                           return ResumeCard(
-                            title: educationItem["title"]!,
-                            date: educationItem["date"]!,
-                            company: educationItem["company"]!,
+                            title: educationItem.title,
+                            indexKey: "KEY_${educationItem.company}_$index",
+                            date: educationItem.date,
+                            company: educationItem.company,
                           );
                         },
                       ),

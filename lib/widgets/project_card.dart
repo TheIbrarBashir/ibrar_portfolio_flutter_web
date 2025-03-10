@@ -42,10 +42,11 @@ class _ProjectCardState extends State<ProjectCard> {
                 borderRadius: BorderRadius.circular(15),
               ),
               child: Stack(
-                children: [
+                children: <Widget>[
                   Container(
                     margin: const EdgeInsets.all(40),
                     decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
                       image: DecorationImage(
                         image: AssetImage(
                           widget.project.imageUrl,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/constants/app_assets.dart';
 import 'package:flutter_portfolio/constants/colors.dart';
 
 class DrawerImage extends StatelessWidget {
@@ -15,7 +16,7 @@ class DrawerImage extends StatelessWidget {
       decoration:const BoxDecoration(
         shape: BoxShape.circle,
         gradient: LinearGradient(
-          colors: [
+          colors:<Color> [
             AppColors. studio,
             Color(0xFF6a5ae4),
           ],
@@ -25,7 +26,7 @@ class DrawerImage extends StatelessWidget {
         child: Transform.rotate(
           angle: 0.1,
           child: Image.asset(
-            'assets/images/profile_new.jpg',
+            AppImages.profile,
             fit: BoxFit.cover,
           ),
         ),

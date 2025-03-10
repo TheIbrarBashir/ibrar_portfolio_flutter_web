@@ -5,6 +5,9 @@ import 'package:flutter_portfolio/constants/colors.dart';
 import 'package:flutter_portfolio/constants/const.dart';
 import 'package:flutter_portfolio/constants/styles.dart';
 import 'package:flutter_portfolio/widgets/gradient_text.dart';
+import 'package:get/get.dart';
+
+import '../../localization/text_keys.dart';
 
 class ContactMeSection extends StatefulWidget {
   final Size size;
@@ -43,10 +46,10 @@ class _ContactMeSectionState extends State<ContactMeSection> {
             verticalSpace(0.05),
             GradientTextWidget(
               size: widget.size,
-              text1: "Let's work together!",
+              text1: TextKeys.callToAction.tr,
             ),
             Text(
-              "What's next? Feel free to reach out to me if you're looking for a developer, or simply want to connect.",
+              TextKeys.callToActionDetail.tr,
               style: TextStyles.style16regular,
               textAlign: TextAlign.center,
             ),
@@ -63,7 +66,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
                 ),
                 horizontalSpaceMedium(),
                 Text(
-                  "odapo138@gmail.com",
+                  "waqarbashir462@gmail.com",
                   style: TextStyles.style24extrabold,
                 ),
                 horizontalSpaceMedium(),
@@ -71,7 +74,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
                   onTap: () {
                     Clipboard.setData(
                       const ClipboardData(
-                        text: "odapo138@gmail.com",
+                        text: "waqarbashir462@gmail.com",
                       ),
                     );
                   },
@@ -98,7 +101,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
                 ),
                 horizontalSpaceMedium(),
                 Text(
-                  "+(234) 702 5214 514",
+                  "+(92) 304 0733783",
                   style: TextStyles.style24extrabold,
                 ),
                 horizontalSpaceMedium(),
@@ -106,7 +109,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
                   onTap: () {
                     Clipboard.setData(
                       const ClipboardData(
-                        text: "+(234) 702 5214 514",
+                        text: "+(92) 304 0733783",
                       ),
                     );
                   },
@@ -122,7 +125,7 @@ class _ContactMeSectionState extends State<ContactMeSection> {
             ),
             verticalSpace(0.1),
             Text(
-              "© 2025 All Rights Reserved by Oladapo Olatubosun",
+              TextKeys.copyRights.tr,
               style: TextStyles.style16regular,
               textAlign: TextAlign.center,
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/constants/app_assets.dart';
 import 'package:lottie/lottie.dart';
 
 import 'constants/colors.dart';
@@ -40,7 +41,7 @@ class _LoadingPageState extends State<LoadingPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Lottie.asset(
-                'assets/json/loading.json',
+                AppAnimation.loading,
                 width: width() * 0.5,
               ),
             ],

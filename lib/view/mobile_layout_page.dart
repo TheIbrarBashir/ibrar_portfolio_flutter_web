@@ -7,7 +7,7 @@ import 'package:flutter_portfolio/widgets/header_text_widget.dart';
 import 'package:flutter_portfolio/widgets/rotating_image_widget.dart';
 import 'package:flutter_portfolio/view/sections/my_skills_section.dart';
 import 'package:flutter_portfolio/view/sections/projects_section.dart';
-import 'package:flutter_portfolio/view/sections/resume_section.dart';
+import 'package:flutter_portfolio/view/sections/education_experience_section.dart';
 import 'package:flutter_portfolio/widgets/social_tab.dart';
 import 'package:flutter_portfolio/view/sections/stats_section.dart';
 

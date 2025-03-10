@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/constants/const.dart';
 import 'package:flutter_portfolio/constants/styles.dart';
+import 'package:get/get.dart';
+
+import '../localization/text_keys.dart';
 
 class ResponsiveNavBar extends StatelessWidget {
   final List<String> menuItems = [
-    'About',
-    'Projects',
-    'Resume',
-    'Skills',
-    'Contact',
+    TextKeys.about.tr,
+    TextKeys.projects.tr,
+    TextKeys.resume.tr,
+    TextKeys.skills.tr,
+    TextKeys.getQuote.tr,
+    TextKeys.contactMe.tr,
   ];
   final ValueChanged<String> onItemSelected;
 

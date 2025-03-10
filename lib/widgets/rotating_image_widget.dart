@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/constants/app_assets.dart';
 import 'package:flutter_portfolio/constants/colors.dart';
 
 import 'dart:math' as math;
@@ -14,6 +15,7 @@ class RotatingImageContainer extends StatefulWidget {
 
 class _RotatingImageContainerState extends State<RotatingImageContainer> {
   bool isHovered = false;
+
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
@@ -25,17 +27,18 @@ class _RotatingImageContainerState extends State<RotatingImageContainer> {
           ..setEntry(3, 2, 0.001)
           ..rotateZ(isHovered ? 0 : math.pi / 36),
         alignment: Alignment.center,
-        height: width() > 950 ? width() * 0.24 : width() * 0.4,
-        width: width() > 950 ? width() * 0.24 : width() * 0.4,
+        height: width() > 950 ? width() * 0.18 : width() * 0.3,
+        width: width() > 950 ? width() * 0.18: width() * 0.3,
         decoration: BoxDecoration(
+          shape: BoxShape.rectangle,
           image: const DecorationImage(
             fit: BoxFit.cover,
-            image: AssetImage(
-              'assets/images/profile_new.jpg',
-            ),
+            image: AssetImage(AppImages.profile),
           ),
-          border: Border.all(color: isHovered ? AppColors.studio :AppColors. valhalla, width: 1.2),
-          borderRadius: BorderRadius.circular(20),
+          border: Border.all(
+              color: isHovered ? AppColors.studio : AppColors.valhalla,
+              width: 1.2),
+          borderRadius: BorderRadius.circular(15),
         ),
       ),
     );

@@ -8,12 +8,14 @@ class ResumeCard extends StatefulWidget {
   final String title;
   final String date;
   final String company;
+  final String indexKey;
 
   const ResumeCard({
     super.key,
     required this.title,
     required this.date,
     required this.company,
+    required this.indexKey,
   });
 
   @override
@@ -26,7 +28,7 @@ class _ResumeCardState extends State<ResumeCard> {
   @override
   Widget build(BuildContext context) {
     return VisibilityDetector(
-      key: Key(widget.company),
+      key: Key(widget.indexKey),
       onVisibilityChanged: (info) {
         if (info.visibleFraction > 0.1 && !_isVisible) {
           setState(() => _isVisible = true);
@@ -40,7 +42,7 @@ class _ResumeCardState extends State<ResumeCard> {
           child: Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color:AppColors. revolver,
+              color: AppColors.revolver,
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(
@@ -49,7 +51,7 @@ class _ResumeCardState extends State<ResumeCard> {
                 Text(
                   widget.date,
                   style: TextStyles.style18extrabold.copyWith(
-                    color:AppColors. studio,
+                    color: AppColors.studio,
                     fontSize: width() > 950
                         ? 18
                         : width() < 600

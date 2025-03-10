@@ -2,65 +2,72 @@ import 'package:flutter_portfolio/model/project_model.dart';
 
 List<Project> myProjects = [
   Project(
-    title: 'MoniMoore',
-    subtitle: "Open Banking, PFM",
+    title: 'EurekaJo',
+    subtitle: "Realestate, Buy,Sell, Properties",
     description:
-        'An application that offers a solution by providing an AI-powered personal finance management application that helps users to manage their finances.',
-    imageUrl: 'assets/images/monimoore.png',
-    projectUrl: 'https://monimoore.com/',
+        'EurekaJO is a real estate application targeted at the Jordanian market. It is designed to allow the freedom for individuals (buyers or sellers) to connect with each other on a platform solely dedicated for the listings of real estate in Jordan, whether it was an apartment, villa, home, house, land or a farm. We allow individuals to search for pieces of real estate to have a better and more realistic view of the property they are searching for, also giving them the feeling of actually being there as if in reality.',
+    imageUrl: 'assets/images/EurekaJo.png',
+    projectUrl: 'https://eurekajo.com/',
+    downloads: "100K+ Downloads",
     technologies: [
       'Flutter',
       'Dart',
       'Firebase',
+      'Push Notification',
+      'Google Maps'
     ],
-    iosUrl: "https://apps.apple.com/ng/app/monimoore/id6617758342",
+    iosUrl:
+        "https://apps.apple.com/jo/app/eurekajo-properties-in-jordan/id1617968807",
     androidUrl:
-        "https://play.google.com/store/apps/details?id=com.blockmoorehq.monimoore",
+        "https://play.google.com/store/apps/details?id=com.eurekajo.mobile&hl=en&gl=US",
   ),
   Project(
-    title: 'Kunda Kids',
-    subtitle: "Edu LMS, Storytelling",
+    title: 'The Dividend Tracker',
+    subtitle: "Fintech,Dividend Tracker, Ticker",
+    downloads: "10K+ Downloads",
     description:
-        'A fun and educational storytelling app designed specifically for kids ages 3 to 8!',
-    imageUrl: "assets/images/kundakids.png",
-    projectUrl: 'https://kundakids.com',
+        """The Dividend Tracker, now in a mobile app! It's the easiest way to track your Dividend Portfolio and Dividend Income on the go. Track and forecast your dividend income, see when and how much you'll be paid, and visualize your monthly and annual earnings.""",
+    imageUrl: "assets/images/DividendTracker.png",
+    projectUrl: 'https://thedividendtracker.com',
     technologies: [
       'Flutter',
       'Dart',
       'Firebase',
-      "Stripe",
-      "Paystack",
       "Apple Pay",
       "Google Pay",
+      "Plaid"
     ],
-    iosUrl: "https://apps.apple.com/ng/app/kunda-kids/id1612794970",
+    iosUrl: "https://apps.apple.com/pk/app/the-dividend-tracker/id6443490767",
     androidUrl:
-        "https://play.google.com/store/apps/details?id=com.lhamycodes.kundakids",
+        "https://play.google.com/store/apps/details?id=com.thedividendtracker.app&pcampaignid=web_share",
   ),
   Project(
-    title: 'MyCygnal',
-    subtitle: "Health Information Management",
+    title: 'Yapp Sailing Course',
+    subtitle: "Education,",
+    downloads: "5K+ Downloads",
     description:
-        'An application that organizes all your health information in a clear dashboard and analyzes it.',
+        """Learn to Sail, Engage with AI Chat, Access Nautical Glossary, Knot-Tying Handbook, and More!
+       Perfect for beginners, Yapp Sailing Course offers step-by-step lessons that build a strong foundation before you set foot on a sailboat.""",
     imageUrl: "assets/images/mycygnal.png",
-    projectUrl: 'https://mycygnal.com/',
-    technologies: [
+    projectUrl: 'https://yapp.pro/',
+    technologies: <String>[
       'Flutter',
       'Dart',
+      'Firebase',
       'Socket.io',
     ],
-    iosUrl: "https://apps.apple.com/ng/app/mycygnal/id6502612399",
+    iosUrl: "https://apps.apple.com/pk/app/yapp-sailing-course/id1576346097",
     androidUrl:
-        "http://play.google.com/store/apps/details?id=com.mycygnal.mycygnal",
+        "https://play.google.com/store/apps/details?id=com.yacht.yapp&hl=en&gl=US",
   ),
   Project(
-    title: 'WealthSync',
-    subtitle: "Financial Planning",
+    title: 'Omniya',
+    subtitle: "Social",
     description:
         'A mobile app aimed to revolutionize financial planning experiences for users.',
-    imageUrl: "assets/images/wealthsync.png",
-    projectUrl: 'https://wealthsync.com.ng/',
-    technologies: [
+    imageUrl: "assets/images/Omniya.png",
+    projectUrl: 'https://Omniya.com',
+    technologies: <String>[
       'Flutter',
       'Dart',
       'Socket.io',

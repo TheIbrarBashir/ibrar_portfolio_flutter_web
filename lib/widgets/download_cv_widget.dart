@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_portfolio/constants/colors.dart';
 import 'package:flutter_portfolio/constants/styles.dart';
+import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../localization/text_keys.dart';
 
 class DownloadCVButton extends StatelessWidget {
   const DownloadCVButton({
@@ -14,7 +17,7 @@ class DownloadCVButton extends StatelessWidget {
     return GestureDetector(
       onTap: () async {
         const url =
-            'https://docs.google.com/document/d/1RjeIMeZAW9A-J0H7TwzMQ7uKAiL88Z0Q_zQ5MG-tt8Q/export?format=pdf';
+            '';
         if (await canLaunchUrl(Uri.parse(url))) {
           await launchUrl(Uri.parse(url));
         } else {
@@ -30,9 +33,9 @@ class DownloadCVButton extends StatelessWidget {
             border: Border.all(color: AppColors.paleSlate)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          children: <Widget>[
             Text(
-              "Download CV",
+              TextKeys.downloadCV.tr,
               style: TextStyles.style16regular,
             ),
             const SizedBox.square(

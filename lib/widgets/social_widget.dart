@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/utils/open_link.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_portfolio/constants/colors.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class SocialWidget extends StatelessWidget {
   const SocialWidget({super.key});
@@ -18,19 +18,11 @@ class SocialWidget extends StatelessWidget {
           decoration: BoxDecoration(
               color: Colors.transparent,
               shape: BoxShape.circle,
-              border: Border.all(color:AppColors. studio.withOpacity(0.5))),
+              border: Border.all(color: AppColors.studio.withOpacity(0.5))),
           child: Center(
             child: IconButton(
               hoverColor: AppColors.paleSlate,
-              onPressed: () async {
-                const url =
-                    'https://www.linkedin.com/in/oladapodanielolatubosun/';
-                if (await canLaunchUrl(Uri.parse(url))) {
-                  await launchUrl(Uri.parse(url));
-                } else {
-                  throw 'Could not launch $url';
-                }
-              },
+              onPressed: () => openLink(url: "url"),
               icon: const FaIcon(
                 FontAwesomeIcons.linkedinIn,
                 color: AppColors.studio,
@@ -51,15 +43,8 @@ class SocialWidget extends StatelessWidget {
               border: Border.all(color: AppColors.studio.withOpacity(0.5))),
           child: Center(
             child: IconButton(
-              hoverColor:AppColors. paleSlate,
-              onPressed: () async {
-                const url = 'https://github.com/Dapo-dan';
-                if (await canLaunchUrl(Uri.parse(url))) {
-                  await launchUrl(Uri.parse(url));
-                } else {
-                  throw 'Could not launch $url';
-                }
-              },
+              hoverColor: AppColors.paleSlate,
+              onPressed: () => openLink(url: "url"),
               icon: const FaIcon(
                 FontAwesomeIcons.github,
                 color: AppColors.studio,
@@ -81,15 +66,7 @@ class SocialWidget extends StatelessWidget {
           child: Center(
             child: IconButton(
               hoverColor: AppColors.paleSlate,
-              onPressed: () async {
-                const url =
-                    'https://www.upwork.com/freelancers/~01ef61a88d5ca9b18c';
-                if (await canLaunchUrl(Uri.parse(url))) {
-                  await launchUrl(Uri.parse(url));
-                } else {
-                  throw 'Could not launch $url';
-                }
-              },
+              onPressed: () => openLink(url: "url"),
               icon: const FaIcon(
                 FontAwesomeIcons.upwork,
                 color: AppColors.studio,
